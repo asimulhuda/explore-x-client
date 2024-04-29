@@ -56,9 +56,6 @@ const FirstSection = () => {
             friend, so absorbed in the exquisite sense of mere tranquil
             existence, that I neglect my talents.
           </p>
-          <button type="button" className="self-start">
-            Action
-          </button>
         </div>
       </div>
     </div>

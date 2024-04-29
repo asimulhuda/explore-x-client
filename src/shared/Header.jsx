@@ -35,14 +35,20 @@ const Header = () => {
           Destinations
         </NavLink>
       </Typography>
+
       <Typography as="li">
-        <NavLink to="/contact" className="text-lg font-normal">
-          Contact
+        <NavLink to="/tourlist" className="text-lg font-normal">
+          All Tours
         </NavLink>
       </Typography>
       <Typography as="li">
-        <NavLink to="/addplace" className="text-lg font-normal">
-          Add Place
+        <NavLink to="/addnewtour" className="text-lg font-normal">
+          Add New Tour
+        </NavLink>
+      </Typography>
+      <Typography as="li">
+        <NavLink to="/contact" className="text-lg font-normal">
+          Contact
         </NavLink>
       </Typography>
     </ul>
