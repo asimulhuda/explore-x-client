@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   MobileNav,
   Button,
   IconButton,
   Typography,
+  Avatar,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
 } from "@material-tailwind/react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/exploreX.png";
+import { AuthContext } from "../provider/AuthProvider";
+import userImage from "../assets/user.png";
+import {
+  UserCircleIcon,
+  ChevronDownIcon,
+  Cog6ToothIcon,
+  InboxArrowDownIcon,
+  LifebuoyIcon,
+  PowerIcon,
+} from "@heroicons/react/24/solid";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [openNav, setOpenNav] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const handleLogOut = () => {
+    logOut().then().catch();
+  };
 
   React.useEffect(() => {
     window.addEventListener(
@@ -17,6 +40,31 @@ const Header = () => {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+  const profileMenuItems = (
+    <ul className="space-y-4 p-4 text-center">
+      <Typography as="li">
+        <NavLink to="/addnewtour" className="text-lg font-normal">
+          Add New Tour
+        </NavLink>
+      </Typography>
+      <Typography as="li">
+        <NavLink to="/mylist" className="text-lg font-normal">
+          My List
+        </NavLink>
+      </Typography>
+      <Typography as="li">
+        <Button
+          onClick={handleLogOut}
+          variant="gradient"
+          size="md"
+          color="red"
+          className="text-lg w-full"
+        >
+          LogOut
+        </Button>
+      </Typography>
+    </ul>
+  );
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -30,22 +78,20 @@ const Header = () => {
           Services
         </NavLink>
       </Typography>
-      <Typography as="li">
-        <NavLink to="/destinations" className="text-lg font-normal">
-          Destinations
-        </NavLink>
-      </Typography>
-
-      <Typography as="li">
-        <NavLink to="/tourlist" className="text-lg font-normal">
-          All Tours
-        </NavLink>
-      </Typography>
-      <Typography as="li">
-        <NavLink to="/addnewtour" className="text-lg font-normal">
-          Add New Tour
-        </NavLink>
-      </Typography>
+      {user && (
+        <>
+          <Typography as="li">
+            <NavLink to="/destinations" className="text-lg font-normal">
+              Destinations
+            </NavLink>
+          </Typography>
+          <Typography as="li">
+            <NavLink to="/tourlist" className="text-lg font-normal">
+              All Tours
+            </NavLink>
+          </Typography>
+        </>
+      )}
       <Typography as="li">
         <NavLink to="/contact" className="text-lg font-normal">
           Contact
@@ -64,24 +110,74 @@ const Header = () => {
             <div className="flex items-center gap-4">
               <div className="mr-4 hidden lg:block">{navList}</div>
               <div className="flex items-center gap-x-2">
-                <Link to="/login">
-                  <Button
-                    variant="outlined"
-                    size="md"
-                    className="hidden lg:inline-block"
-                  >
-                    Log In
-                  </Button>
-                </Link>
-                <Link to="/register">
-                  <Button
-                    variant="gradient"
-                    size="md"
-                    className="hidden lg:inline-block"
-                  >
-                    Register
-                  </Button>
-                </Link>
+                {user ? (
+                  <>
+                    <Menu
+                      open={isMenuOpen}
+                      handler={setIsMenuOpen}
+                      placement="bottom-end"
+                    >
+                      <MenuHandler>
+                        <Button
+                          variant="text"
+                          color="blue-gray"
+                          className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto"
+                        >
+                          <Avatar
+                            variant="circular"
+                            size="md"
+                            alt="tania andrew"
+                            className="border border-gray-900 p-0.5"
+                            src={user.photoURL ? user.photoURL : userImage}
+                          />
+                          <ChevronDownIcon
+                            strokeWidth={2.5}
+                            className={`h-3 w-3 transition-transform ${
+                              isMenuOpen ? "rotate-180" : ""
+                            }`}
+                          />
+                        </Button>
+                      </MenuHandler>
+                      <MenuList className="w-80">
+                        <div className="py-4 space-y-2 text-center">
+                          <Avatar
+                            variant="circular"
+                            alt="tania andrew"
+                            className="border w-24 h-24 border-gray-900 p-0.5"
+                            src={user.photoURL ? user.photoURL : userImage}
+                          />
+                          <h4 className="text-xl font-semibold">
+                            {user?.displayName}
+                          </h4>
+                          <p>{user?.email}</p>
+                        </div>
+                        <MenuItem>{profileMenuItems}</MenuItem>
+                      </MenuList>
+                    </Menu>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/register">
+                      <Button
+                        variant="outlined"
+                        size="lg"
+                        className="hidden lg:inline-block"
+                      >
+                        Register
+                      </Button>
+                    </Link>
+
+                    <Link to="/login">
+                      <Button
+                        variant="gradient"
+                        size="lg"
+                        className="hidden lg:inline-block"
+                      >
+                        Login
+                      </Button>
+                    </Link>
+                  </>
+                )}
               </div>
               <IconButton
                 variant="text"
@@ -124,13 +220,31 @@ const Header = () => {
           </div>
           <MobileNav className="mt-4" open={openNav}>
             {navList}
-            <div className="flex items-center gap-x-1">
-              <Button fullWidth variant="text" size="sm" className="">
-                <span>Log In</span>
-              </Button>
-              <Button fullWidth variant="gradient" size="sm" className="">
-                <span>Sign in</span>
-              </Button>
+            <div className="flex items-center gap-x-2">
+              {user ? (
+                <Button
+                  onClick={handleLogOut}
+                  fullWidth
+                  variant="gradient"
+                  size="md"
+                  className=""
+                >
+                  LogOut
+                </Button>
+              ) : (
+                <>
+                  <Link to="register" className="w-full">
+                    <Button fullWidth variant="outlined" size="md" className="">
+                      Register
+                    </Button>
+                  </Link>
+                  <Link to="/login" className="w-full">
+                    <Button fullWidth variant="gradient" size="md" className="">
+                      Login
+                    </Button>
+                  </Link>
+                </>
+              )}
             </div>
           </MobileNav>
         </div>

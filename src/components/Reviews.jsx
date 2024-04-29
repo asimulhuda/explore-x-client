@@ -12,7 +12,9 @@ const Reviews = () => {
   return (
     <div className="lg:max-w-[1200px] lg:mx-auto mx-5 my-16 space-y-10 text-white">
       <div className="text-center">
-        <h2 className="lg:text-3xl text-2xl font-bold">Customer Reviews</h2>
+        <h2 className="lg:text-3xl text-2xl font-bold text-black">
+          Customer Reviews
+        </h2>
       </div>
       <Swiper
         breakpoints={{

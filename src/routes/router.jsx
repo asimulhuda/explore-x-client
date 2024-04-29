@@ -11,6 +11,9 @@ import Register from "../pages/Register";
 import Error from "../shared/Error";
 import TourList from "../pages/TourList";
 import AddNewTour from "../pages/AddNewTour";
+import Details from "../pages/Details";
+import MyList from "../pages/MyList";
+import PrivateRoute from "./PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,11 +34,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/destinations",
-        element: <Destinations></Destinations>,
+        element: (
+          <PrivateRoute>
+            <Destinations></Destinations>,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/tourlist",
-        element: <TourList></TourList>,
+        element: (
+          <PrivateRoute>
+            <TourList></TourList>,
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/details",
+        element: (
+          <PrivateRoute>
+            <Details></Details>,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/contact",
@@ -43,11 +62,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/addnewtour",
-        element: <AddNewTour></AddNewTour>,
+        element: (
+          <PrivateRoute>
+            <AddNewTour></AddNewTour>,
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/mylist",
+        element: (
+          <PrivateRoute>
+            <MyList></MyList>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/editplace",
-        element: <EditPlace></EditPlace>,
+        element: (
+          <PrivateRoute>
+            <EditPlace></EditPlace>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
