@@ -12,7 +12,7 @@ const PopularTours = ({ singleToureCard }) => {
         </Link>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-        {singleToureCard.slice(0, 6).map((singleCard) => (
+        {singleToureCard.map((singleCard) => (
           <PopularToursCard
             key={singleCard._id}
             singleCard={singleCard}

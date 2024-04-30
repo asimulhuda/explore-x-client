@@ -9,7 +9,9 @@ const MyList = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/my-tour-list/${user?.email}`)
+      .get(
+        `https://explore-x-server-nine.vercel.app/my-tour-list/${user?.email}`
+      )
       .then((data) => setTourList(data.data));
   }, []);
 

@@ -12,7 +12,7 @@ const Details = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/tourDetails/${id}`)
+      .get(`https://explore-x-server-nine.vercel.app/tourDetails/${id}`)
       .then((data) => setSingleDetail(data.data));
   }, [id]);
 

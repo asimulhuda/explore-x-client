@@ -37,18 +37,20 @@ const AddNewTour = () => {
       userEmail,
     };
 
-    axios.post("http://localhost:5000/tour", newTour).then((data) => {
-      console.log(data);
-      if (data.data.insertedId) {
-        Swal.fire({
-          title: "Success!",
-          text: "New Tour Added Successfully",
-          icon: "success",
-          confirmButtonText: "Cool",
-          confirmButtonColor: "Green",
-        });
-      }
-    });
+    axios
+      .post("https://explore-x-server-nine.vercel.app/tour", newTour)
+      .then((data) => {
+        console.log(data);
+        if (data.data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "New Tour Added Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+            confirmButtonColor: "Green",
+          });
+        }
+      });
 
     form.reset();
   };

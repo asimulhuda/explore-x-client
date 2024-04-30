@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/tour"),
+        loader: () => fetch("https://explore-x-server-nine.vercel.app/tour"),
       },
       {
         path: "/about",
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             <TourList></TourList>,
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/tour"),
+        loader: () => fetch("https://explore-x-server-nine.vercel.app/tour"),
       },
       {
         path: "/details/:id",

@@ -11,7 +11,7 @@ const EditPlace = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/tourDetails/${id}`)
+      .get(`https://explore-x-server-nine.vercel.app/tourDetails/${id}`)
       .then((data) => setSingleDetail(data.data));
   }, [id]);
 
@@ -53,7 +53,7 @@ const EditPlace = () => {
       description,
     };
 
-    fetch(`http://localhost:5000/updateDetails/${id}`, {
+    fetch(`https://explore-x-server-nine.vercel.app/updateDetails/${id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(newTour),

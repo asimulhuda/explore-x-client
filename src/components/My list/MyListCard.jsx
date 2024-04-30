@@ -14,7 +14,7 @@ const MyListCard = ({ singleCard }) => {
   const { averageCost, touristSpotName, travelTime, image, _id } = singleCard;
 
   const handleDelete = (_id) => {
-    fetch(`http://localhost:5000/delete/${_id}`, {
+    fetch(`https://explore-x-server-nine.vercel.app/delete/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
