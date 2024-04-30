@@ -23,6 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/tour"),
       },
       {
         path: "/about",
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
             <Destinations></Destinations>,
           </PrivateRoute>
         ),
+        loader: () => fetch("/destinations.json"),
       },
       {
         path: "/tourlist",
@@ -47,9 +49,10 @@ const router = createBrowserRouter([
             <TourList></TourList>,
           </PrivateRoute>
         ),
+        loader: () => fetch("http://localhost:5000/tour"),
       },
       {
-        path: "/details",
+        path: "/details/:id",
         element: (
           <PrivateRoute>
             <Details></Details>,
@@ -77,7 +80,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/editplace",
+        path: "/editplace/:id",
         element: (
           <PrivateRoute>
             <EditPlace></EditPlace>

@@ -1,6 +1,12 @@
 import { Button, Input, Textarea } from "@material-tailwind/react";
+import { AuthContext } from "../provider/AuthProvider";
+import { useContext } from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const AddNewTour = () => {
+  const { user } = useContext(AuthContext);
+
   const handleAddNewTour = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -13,10 +19,11 @@ const AddNewTour = () => {
     const seasonality = form.seasonality.value;
     const travelTime = form.travelTime.value;
     const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
-    // const userName = form.userName.value;
-    // const userEmail = form.userEmail.value;
+    const description = form.description.value;
+    const userName = user?.displayName;
+    const userEmail = user?.email;
 
-    console.log(
+    const newTour = {
       image,
       touristSpotName,
       countryName,
@@ -24,8 +31,25 @@ const AddNewTour = () => {
       averageCost,
       seasonality,
       travelTime,
-      totalVisitorsPerYear
-    );
+      totalVisitorsPerYear,
+      description,
+      userName,
+      userEmail,
+    };
+
+    axios.post("http://localhost:5000/tour", newTour).then((data) => {
+      console.log(data);
+      if (data.data.insertedId) {
+        Swal.fire({
+          title: "Success!",
+          text: "New Tour Added Successfully",
+          icon: "success",
+          confirmButtonText: "Cool",
+          confirmButtonColor: "Green",
+        });
+      }
+    });
+
     form.reset();
   };
 
@@ -96,12 +120,16 @@ const AddNewTour = () => {
               />
               <Input
                 label="Total Visitors Per Year"
-                type="number"
+                type="text"
                 name="totalVisitorsPerYear"
                 required
               />
               <div className="sm:col-span-2">
-                <Textarea label="Short Description" required />
+                <Textarea
+                  label="Short Description"
+                  name="description"
+                  required
+                />
               </div>
             </div>
             <Button size="lg" className="w-full" type="submit">

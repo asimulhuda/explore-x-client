@@ -8,9 +8,27 @@ import {
 } from "@material-tailwind/react";
 import { PiClockCountdownBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const PopularToursCard = ({ singleCard }) => {
+const MyListCard = ({ singleCard }) => {
   const { averageCost, touristSpotName, travelTime, image, _id } = singleCard;
+
+  const handleDelete = (_id) => {
+    fetch(`http://localhost:5000/delete/${_id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your tour has been deleted.",
+            icon: "success",
+          });
+        }
+      });
+  };
+
   return (
     <div>
       <Card className="rounded-none">
@@ -39,16 +57,31 @@ const PopularToursCard = ({ singleCard }) => {
             </Typography>
           </div>
         </CardBody>
-        <CardFooter>
+        <CardFooter className="space-y-4">
           <Link to={`/details/${_id}`}>
             <Button size="lg" className="w-full bg-[#F97150]">
               View Details
             </Button>
           </Link>
+          <div className="grid grid-cols-2 gap-6">
+            <Link to={`/editplace/${_id}`}>
+              <Button size="lg" className="w-full ">
+                Update
+              </Button>
+            </Link>
+            <Button
+              onClick={() => handleDelete(_id)}
+              size="lg"
+              className="w-full"
+              color="red"
+            >
+              Delete
+            </Button>
+          </div>
         </CardFooter>
       </Card>
     </div>
   );
 };
 
-export default PopularToursCard;
+export default MyListCard;

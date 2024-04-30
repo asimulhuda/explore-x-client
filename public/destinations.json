@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Eiffel Tower",
+    "image": "https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Iconic Parisian landmark"
+  },
+  {
+    "id": 2,
+    "name": "Louvre Museum",
+    "image": "https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg?auto=compress&cs=tinysrgb&w=600",
+    "description": "World's largest art museum"
+  },
+  {
+    "id": 3,
+    "name": "Mont Saint-Michel",
+    "image": "https://images.pexels.com/photos/13282612/pexels-photo-13282612.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Island commune with medieval abbey"
+  },
+  {
+    "id": 4,
+    "name": "Colosseum",
+    "image": "https://images.pexels.com/photos/356966/pexels-photo-356966.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Ancient amphitheater in Rome"
+  },
+  {
+    "id": 5,
+    "name": "Venice Canals",
+    "image": "https://images.pexels.com/photos/534362/pexels-photo-534362.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Famous network of waterways"
+  },
+  {
+    "id": 6,
+    "name": "Florence Cathedral",
+    "image": "https://images.pexels.com/photos/4179480/pexels-photo-4179480.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Stunning Renaissance architecture"
+  },
+  {
+    "id": 7,
+    "name": "Sagrada Família",
+    "image": "https://images.pexels.com/photos/1386444/pexels-photo-1386444.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Breathtaking basilica in Barcelona"
+  },
+  {
+    "id": 8,
+    "name": "Alhambra",
+    "image": "https://images.pexels.com/photos/2431436/pexels-photo-2431436.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Moorish palace and fortress complex"
+  },
+  {
+    "id": 9,
+    "name": "Park Güell",
+    "image": "https://images.pexels.com/photos/13426112/pexels-photo-13426112.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Artistic park with colorful mosaic sculptures"
+  },
+  {
+    "id": 10,
+    "name": "Big Ben",
+    "image": "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Iconic clock tower in London"
+  },
+  {
+    "id": 11,
+    "name": "Stonehenge",
+    "image": "https://images.pexels.com/photos/1427569/pexels-photo-1427569.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Ancient prehistoric monument"
+  },
+  {
+    "id": 12,
+    "name": "Buckingham Palace",
+    "image": "https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Official residence of the Queen"
+  },
+  {
+    "id": 13,
+    "name": "Keukenhof Gardens",
+    "image": "https://images.pexels.com/photos/158148/ruhl-house-home-galveston-texas-158148.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Vast flower gardens"
+  },
+  {
+    "id": 14,
+    "name": "Van Gogh Museum",
+    "image": "https://images.pexels.com/photos/11951240/pexels-photo-11951240.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Dedicated to the works of Van Gogh"
+  },
+  {
+    "id": 15,
+    "name": "Anne Frank House",
+    "image": "https://images.pexels.com/photos/2394989/pexels-photo-2394989.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Museum in the former home of Anne Frank"
+  }
+]

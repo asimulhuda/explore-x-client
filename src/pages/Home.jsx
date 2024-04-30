@@ -4,15 +4,17 @@ import PopularDestinations from "../components/PopularDestinations";
 import Discount from "../components/Discount";
 import PopularTours from "../components/PopularTours";
 import Reviews from "../components/Reviews";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+  const singleToureCard = useLoaderData();
   return (
     <div>
       <Hero></Hero>
       <Featured></Featured>
       <PopularDestinations></PopularDestinations>
       <Discount></Discount>
-      <PopularTours></PopularTours>
+      <PopularTours singleToureCard={singleToureCard}></PopularTours>
       <Reviews></Reviews>
     </div>
   );

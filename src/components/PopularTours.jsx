@@ -2,7 +2,7 @@ import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { Link } from "react-router-dom";
 import PopularToursCard from "./PopularToursCard";
 
-const PopularTours = () => {
+const PopularTours = ({ singleToureCard }) => {
   return (
     <div className="lg:max-w-[1200px] lg:mx-auto mx-5 my-16 space-y-10">
       <div className="flex flex-col items-center space-y-4">
@@ -12,7 +12,12 @@ const PopularTours = () => {
         </Link>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-        <PopularToursCard></PopularToursCard>
+        {singleToureCard.slice(0, 6).map((singleCard) => (
+          <PopularToursCard
+            key={singleCard._id}
+            singleCard={singleCard}
+          ></PopularToursCard>
+        ))}
       </div>
     </div>
   );

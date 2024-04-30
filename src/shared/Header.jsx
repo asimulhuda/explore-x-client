@@ -14,14 +14,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/exploreX.png";
 import { AuthContext } from "../provider/AuthProvider";
 import userImage from "../assets/user.png";
-import {
-  UserCircleIcon,
-  ChevronDownIcon,
-  Cog6ToothIcon,
-  InboxArrowDownIcon,
-  LifebuoyIcon,
-  PowerIcon,
-} from "@heroicons/react/24/solid";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -100,7 +93,7 @@ const Header = () => {
     </ul>
   );
   return (
-    <div className="bg-[#fff]">
+    <div className="">
       <div className="lg:max-w-[1200px] lg:mx-auto md:mx-5 mx-5">
         <div className="sticky top-0 z-10 h-max rounded-none py-2 lg:py-4 shadow-none">
           <div className="flex items-center justify-between text-blue-gray-900">
@@ -227,19 +220,19 @@ const Header = () => {
                   fullWidth
                   variant="gradient"
                   size="md"
-                  className=""
+                  color="red"
                 >
                   LogOut
                 </Button>
               ) : (
                 <>
                   <Link to="register" className="w-full">
-                    <Button fullWidth variant="outlined" size="md" className="">
+                    <Button fullWidth variant="outlined" size="md">
                       Register
                     </Button>
                   </Link>
                   <Link to="/login" className="w-full">
-                    <Button fullWidth variant="gradient" size="md" className="">
+                    <Button fullWidth variant="gradient" size="md">
                       Login
                     </Button>
                   </Link>
