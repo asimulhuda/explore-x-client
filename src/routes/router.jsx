@@ -35,20 +35,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/destinations",
-        element: (
-          <PrivateRoute>
-            <Destinations></Destinations>,
-          </PrivateRoute>
-        ),
+        element: <Destinations></Destinations>,
+
         loader: () => fetch("/destinations.json"),
       },
       {
         path: "/tourlist",
-        element: (
-          <PrivateRoute>
-            <TourList></TourList>,
-          </PrivateRoute>
-        ),
+        element: <TourList></TourList>,
         loader: () => fetch("https://explore-x-server-nine.vercel.app/tour"),
       },
       {

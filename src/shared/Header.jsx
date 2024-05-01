@@ -71,20 +71,18 @@ const Header = () => {
           Services
         </NavLink>
       </Typography>
-      {user && (
-        <>
-          <Typography as="li">
-            <NavLink to="/destinations" className="text-lg font-normal">
-              Destinations
-            </NavLink>
-          </Typography>
-          <Typography as="li">
-            <NavLink to="/tourlist" className="text-lg font-normal">
-              All Tours
-            </NavLink>
-          </Typography>
-        </>
-      )}
+
+      <Typography as="li">
+        <NavLink to="/destinations" className="text-lg font-normal">
+          Destinations
+        </NavLink>
+      </Typography>
+
+      <Typography as="li">
+        <NavLink to="/tourlist" className="text-lg font-normal">
+          All Tours
+        </NavLink>
+      </Typography>
       <Typography as="li">
         <NavLink to="/contact" className="text-lg font-normal">
           Contact

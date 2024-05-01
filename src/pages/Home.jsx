@@ -7,14 +7,14 @@ import Reviews from "../components/Reviews";
 import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
-  const singleToureCard = useLoaderData();
+  const singleTourCard = useLoaderData();
   return (
     <div>
       <Hero></Hero>
       <Featured></Featured>
       <PopularDestinations></PopularDestinations>
       <Discount></Discount>
-      <PopularTours singleToureCard={singleToureCard}></PopularTours>
+      <PopularTours singleTourCard={singleTourCard}></PopularTours>
       <Reviews></Reviews>
     </div>
   );
