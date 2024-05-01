@@ -42,7 +42,9 @@ const Details = () => {
             {location}
           </h4>
         </div>
-        <h4 className="text-3xl">${averageCost}</h4>
+        <h4 className="text-3xl text-[#F97553] font-semibold">
+          ${averageCost}
+        </h4>
       </div>
 
       <div className="flex lg:flex-row flex-col gap-10">

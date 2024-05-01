@@ -1,7 +1,11 @@
 const SecondSection = () => {
   return (
     <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
-      <div>
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        data-aos-duration="2000"
+      >
         <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-gray-900">
           Aliquip definiebas ad est
         </h2>
@@ -10,7 +14,7 @@ const SecondSection = () => {
         </p>
       </div>
       <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
-        <div>
+        <div data-aos="fade-right" data-aos-duration="2000">
           <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-900">
             Ad vix debet docendi
           </h3>
@@ -110,7 +114,12 @@ const SecondSection = () => {
             </div>
           </div>
         </div>
-        <div aria-hidden="true" className="mt-10 lg:mt-0">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          aria-hidden="true"
+          className="mt-10 lg:mt-0"
+        >
           <img
             src="https://images.pexels.com/photos/19212853/pexels-photo-19212853/free-photo-of-towers-of-cathedral-of-palma-de-mallorca-in-spain.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             alt=""
@@ -120,7 +129,11 @@ const SecondSection = () => {
       </div>
       <div>
         <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
-          <div className="lg:col-start-2">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            className="lg:col-start-2"
+          >
             <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-900">
               Eam nibh gloriatur ex
             </h3>
@@ -220,7 +233,11 @@ const SecondSection = () => {
               </div>
             </div>
           </div>
-          <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1"
+          >
             <img
               src="https://images.pexels.com/photos/2406875/pexels-photo-2406875.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt=""

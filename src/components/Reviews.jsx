@@ -48,9 +48,7 @@ const Reviews = () => {
                   <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                   <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                 </svg>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus quibusdam, eligendi exercitationem molestias
-                possimus facere.
+                Amazing experience, exceeded expectations. Highly recommended.
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -68,10 +66,8 @@ const Reviews = () => {
                 alt=""
                 className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
               />
-              <p className="text-xl font-semibold leading-tight">
-                Distinctio Animi
-              </p>
-              <p className="text-sm uppercase">Aliquam illum</p>
+              <p className="text-xl font-semibold leading-tight">Jhon</p>
+              <p className="text-sm uppercase">Luxury Italy Tour</p>
             </div>
           </div>
         </SwiperSlide>
@@ -88,9 +84,8 @@ const Reviews = () => {
                   <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                   <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                 </svg>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus quibusdam, eligendi exercitationem molestias
-                possimus facere.
+                Great value, knowledgeable guide, unforgettable memories. Book
+                again!
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -109,9 +104,9 @@ const Reviews = () => {
                 className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
               />
               <p className="text-xl font-semibold leading-tight">
-                Distinctio Animi
+                Machu Picchu Expedition
               </p>
-              <p className="text-sm uppercase">Aliquam illum</p>
+              <p className="text-sm uppercase">Maria</p>
             </div>
           </div>
         </SwiperSlide>
@@ -128,9 +123,8 @@ const Reviews = () => {
                   <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                   <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                 </svg>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus quibusdam, eligendi exercitationem molestias
-                possimus facere.
+                Efficient booking, seamless journey, breathtaking sights. Will
+                return soon!
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -149,9 +143,9 @@ const Reviews = () => {
                 className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
               />
               <p className="text-xl font-semibold leading-tight">
-                Distinctio Animi
+                Parisian Adventure
               </p>
-              <p className="text-sm uppercase">Aliquam illum</p>
+              <p className="text-sm uppercase">Emily</p>
             </div>
           </div>
         </SwiperSlide>
@@ -168,9 +162,8 @@ const Reviews = () => {
                   <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                   <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                 </svg>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus quibusdam, eligendi exercitationem molestias
-                possimus facere.
+                Incredible itinerary, friendly staff, smooth logistics. Best
+                trip ever!
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -189,9 +182,9 @@ const Reviews = () => {
                 className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
               />
               <p className="text-xl font-semibold leading-tight">
-                Distinctio Animi
+                Safari Expedition
               </p>
-              <p className="text-sm uppercase">Aliquam illum</p>
+              <p className="text-sm uppercase">Devid</p>
             </div>
           </div>
         </SwiperSlide>

@@ -14,7 +14,9 @@ const Discount = () => {
           <h3 className="text-xl font-bold text-[#fed7c8]">
             Enjoy Summer Deals
           </h3>
-          <h4 className="text-3xl font-bold">Up to 40% Discount!</h4>
+          <h4 className="text-3xl text-center font-bold">
+            Up to 40% Discount!
+          </h4>
           <Link to="/services">
             <Button size="lg">Learn More</Button>
           </Link>

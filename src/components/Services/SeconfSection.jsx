@@ -7,7 +7,12 @@ const SeconfSection = () => {
   return (
     <div className="services-action-bg">
       <div className="lg:max-w-[1200px] lg:mx-auto mx-5 py-16">
-        <div className=" grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 text-white">
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+          data-aos-duration="2000"
+          className=" grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 text-white"
+        >
           <div className="flex flex-col p-4 space-y-6">
             <FaRegLightbulb className="text-4xl" />
             <h3 className="my-3 text-2xl font-semibold">Clever System</h3>

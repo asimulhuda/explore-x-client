@@ -4,7 +4,11 @@ import { RiDiscountPercentLine } from "react-icons/ri";
 const Featured = () => {
   return (
     <div className="lg:max-w-[1200px] lg:mx-auto mx-5 my-10 bg-[#F97553] items-center text-white lg:p-10 p-6 sm:space-y-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-      <div className="flex gap-6">
+      <div
+        data-aos="fade-right"
+        data-aos-duration="2000"
+        className="flex gap-6"
+      >
         <div>
           <FaEarthAfrica className="text-4xl" />
         </div>
@@ -13,7 +17,7 @@ const Featured = () => {
           <p>Our expert team handpicked all destinations in this site</p>
         </div>
       </div>
-      <div className="flex gap-6">
+      <div data-aos="fade-up" data-aos-duration="2000" className="flex gap-6">
         <div>
           <RiDiscountPercentLine className="text-4xl" />
         </div>
@@ -22,7 +26,7 @@ const Featured = () => {
           <p>Price match within 48 hours of order confirmation</p>
         </div>
       </div>
-      <div className="flex gap-6">
+      <div data-aos="fade-left" data-aos-duration="2000" className="flex gap-6">
         <div>
           <FaUsersGear className="text-4xl" />
         </div>

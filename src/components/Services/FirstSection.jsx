@@ -7,7 +7,11 @@ const FirstSection = () => {
           alt=""
           className="lg:w-1/2 dark:bg-gray-500 aspect-video"
         />
-        <div className="flex flex-col justify-center flex-1 lg:pl-20 lg:pr-80 p-6 dark:bg-gray-50 ">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          className="flex flex-col justify-center flex-1 lg:pl-20 lg:pr-80 p-6 dark:bg-gray-50 "
+        >
           <span className="text-lg  italic dark:text-gray-600">Our Story</span>
           <h3 className="text-4xl font-bold">A Little About Us</h3>
           <p className="my-6 text-[#8c8c8c] text-inherit">
@@ -26,7 +30,11 @@ const FirstSection = () => {
           alt=""
           className=" dark:bg-gray-500 aspect-video lg:w-1/2"
         />
-        <div className="flex flex-col justify-center lg:pr-20 lg:pl-80 flex-1 p-6 dark:bg-gray-50">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          className="flex flex-col justify-center lg:pr-20 lg:pl-80 flex-1 p-6 dark:bg-gray-50"
+        >
           <span className="text-lg  italic dark:text-gray-600">Philosophy</span>
           <h3 className="text-4xl font-bold">Our Top Missions</h3>
           <p className="my-6 text-[#8c8c8c] text-inherit">
@@ -45,7 +53,11 @@ const FirstSection = () => {
           alt=""
           className="dark:bg-gray-500 aspect-video lg:w-1/2"
         />
-        <div className="flex flex-col justify-center flex-1 lg:pl-20 lg:pr-80 p-6 dark:bg-gray-50">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          className="flex flex-col justify-center flex-1 lg:pl-20 lg:pr-80 p-6 dark:bg-gray-50"
+        >
           <span className="text-lg  italic dark:text-gray-600">Strategy</span>
           <h3 className="text-4xl font-bold">We Provide Solutions</h3>
           <p className="my-6 text-[#8c8c8c] text-inherit">

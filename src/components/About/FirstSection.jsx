@@ -1,7 +1,11 @@
 const FirstSection = () => {
   return (
     <div className="container flex flex-col-reverse mx-auto lg:flex-row">
-      <div className="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-default-600 dark:text-gray-50">
+      <div
+        data-aos="fade-right"
+        data-aos-duration="2000"
+        className="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-default-600 dark:text-gray-50"
+      >
         <div className="flex space-x-2 sm:space-x-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +82,11 @@ const FirstSection = () => {
           </div>
         </div>
       </div>
-      <div className="lg:w-1/2 xl:w-3/5 dark:bg-gray-100">
+      <div
+        data-aos="fade-left"
+        data-aos-duration="2000"
+        className="lg:w-1/2 xl:w-3/5 dark:bg-gray-100"
+      >
         <div className="flex items-center justify-center p-4 md:p-8 lg:p-12">
           <img
             src="https://images.pexels.com/photos/2399696/pexels-photo-2399696.jpeg?auto=compress&cs=tinysrgb&w=600"
